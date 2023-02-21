@@ -17,6 +17,7 @@ h1 {
   font-size: 5rem;
   color: #95bdff;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 form {
@@ -94,3 +95,18 @@ button:active {
 /* .box {
   background-color: rgba(255, 255, 255, 0.5);
 } */
+
+#random {
+  margin-bottom: 2rem;
+}
+
+footer {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+}
