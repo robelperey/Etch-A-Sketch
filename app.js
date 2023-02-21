@@ -3,6 +3,8 @@
 const inputEl = document.querySelector("input");
 const gridContainerEl = document.querySelector("#grid-container");
 const formEl = document.querySelector("form");
+const randomBtn = document.querySelector("#random");
+let randomFillColor = false;
 
 let numberOfSquaresPerSide = 16;
 // grid-template-columns: repeat(16, 1fr);
@@ -31,7 +33,11 @@ function createGrid(numberOfSquaresPerSide) {
 }
 
 function fillBox(e) {
-  e.target.style.backgroundColor = `rgba(0, 0, 0, 0.${9})`;
+  if (randomFillColor) {
+    e.target.style.backgroundColor = randomColor();
+  } else {
+    e.target.style.backgroundColor = `rgba(0, 0, 0, 0.${9})`;
+  }
 }
 
 function randomColor() {
@@ -52,4 +58,14 @@ formEl.addEventListener("submit", (e) => {
   }
 
   e.preventDefault();
+});
+
+randomBtn.addEventListener("click", () => {
+  if (randomFillColor) {
+    randomFillColor = false;
+    randomBtn.textContent = "Turn on random";
+  } else {
+    randomFillColor = true;
+    randomBtn.textContent = "Turn off random";
+  }
 });
