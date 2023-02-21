@@ -32,10 +32,21 @@ function createGrid(numberOfSquaresPerSide) {
 }
 
 function fillBox(e) {
+  console.log();
   if (randomFillColor) {
     e.target.style.backgroundColor = randomColor();
   } else {
-    e.target.style.backgroundColor = `rgba(0, 0, 0, 0.${9})`;
+    // Pencil effect implementation HOOORAAY!
+    if (e.target.style.backgroundColor) {
+      let opacityValue = e.target.style.backgroundColor.slice(-2, -1);
+      if (+opacityValue < 9) {
+        e.target.style.backgroundColor = `rgba(0,0,0,0.${+opacityValue + 1})`;
+      } else {
+        e.target.style.backgroundColor = "black";
+      }
+    } else {
+      e.target.style.backgroundColor = `rgba(0,0,0, 0.1)`;
+    }
   }
 }
 
