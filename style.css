@@ -2,22 +2,94 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to left, gray, white);
-}
-
-#container {
+  background: url("https://images.pexels.com/photos/325807/pexels-photo-325807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background: linear-gradient(to right, #f7c8e0, #95bdff);
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#grid-container {
-  display: flex;
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1rem;
+  font-size: 5rem;
+  color: #95bdff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-.box {
-  width: 10px;
-  height: 10px;
-  margin: 0.3px;
-  background-color: rgba(0, 0, 0, 0.1);
+form {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
 }
+
+input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+input:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background-color: #b4e4ff;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-family: sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#grid-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-width: 500px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* .box {
+  background-color: rgba(255, 255, 255, 0.5);
+} */
