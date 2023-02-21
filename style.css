@@ -4,11 +4,12 @@ body {
   box-sizing: border-box;
   background: url("https://images.pexels.com/photos/325807/pexels-photo-325807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background: linear-gradient(to right, #f7c8e0, #95bdff);
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 h1 {

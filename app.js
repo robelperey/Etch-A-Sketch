@@ -13,7 +13,6 @@ createGrid(numberOfSquaresPerSide);
 
 function createGrid(numberOfSquaresPerSide) {
   gridContainerEl.style.gridTemplateColumns = `repeat(${numberOfSquaresPerSide}, 1fr)`;
-  console.log(gridContainerEl.style);
   for (let boxY = 0; boxY < numberOfSquaresPerSide; boxY++) {
     for (let boxX = 0; boxX < numberOfSquaresPerSide; boxX++) {
       const div = document.createElement("div");
